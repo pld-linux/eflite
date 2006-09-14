@@ -1,0 +1,12 @@
+--- a/Makefile.in~	2006-09-14 21:16:22.000000000 +0200
++++ b/Makefile.in	2006-09-14 21:17:10.000000000 +0200
+@@ -54,7 +54,7 @@
+ endif
+ 
+ install: eflite
+-	mkdir -p $(exec_prefix)/bin && install -c -m 0755 $< $(exec_prefix)/bin
++	mkdir -p $(DESTDIR)$(exec_prefix)/bin && install -c -m 0755 $< $(DESTDIR)$(exec_prefix)/bin
+ 
+ test: eflite
+ 	./eflite -f eflite_test.txt
+
