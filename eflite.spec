@@ -1,15 +1,16 @@
+Summary:	FLite Emacspeak server
+Summary(pl):	FLite - serwer Emacspeak
+Summary(ru):	FLite сервер для Emacspeak
 Name:		eflite
 Version:	0.4.0a
 Release:	0.3
-Summary:	FLite Emacspeak server
-Summary(ru_RU.KOI8-R):	FLite сервер для Emacspeak
 License:	GPL
 Group:		Applications/Sound
-URL:		http://eflite.sourceforge.net/
 Source0:	http://dl.sourceforge.net/eflite/%{name}-%{version}.tar.gz
 # Source0-md5:	9b19610a304a1c9e367ce5bdc9d0fa70
 Patch0:		%{name}-doc.patch
 Patch1:		%{name}-DESTDIR.patch
+URL:		http://eflite.sourceforge.net/
 BuildRequires:	emacs
 BuildRequires:	flite-devel >= 1.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -17,7 +18,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This is a Emacspeak interface to Festival Lite speech synthesizer.
 
-%description -l ru_RU.KOI8-R
+%description -l pl
+Ten pakiet zawiera interfejs Emacspeak do syntezatora mowy Festival
+Lite.
+
+%description -l ru
 Это интерфейс для Emacspeak для синтезатора речи Festival Lite.
 
 %prep
