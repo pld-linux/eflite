@@ -1,6 +1,6 @@
 Summary:	FLite Emacspeak server
-Summary(pl.UTF-8):   FLite - serwer Emacspeak
-Summary(ru.UTF-8):   FLite сервер для Emacspeak
+Summary(pl.UTF-8):	FLite - serwer Emacspeak
+Summary(ru.UTF-8):	FLite сервер для Emacspeak
 Name:		eflite
 Version:	0.4.0a
 Release:	0.3
