@@ -3,14 +3,17 @@ Summary(pl.UTF-8):	FLite - serwer Emacspeak
 Summary(ru.UTF-8):	FLite сервер для Emacspeak
 Name:		eflite
 Version:	0.4.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://dl.sourceforge.net/eflite/%{name}-%{version}.tar.gz
 # Source0-md5:	9c1a25990426ae1c6519ee1a4528dc03
 Patch0:		%{name}-doc.patch
 Patch1:		%{name}-DESTDIR.patch
+Patch2:		%{name}-lib64flite.patch
 URL:		http://eflite.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	emacs
 BuildRequires:	flite-devel >= 1.2
 BuildRequires:	flite-static >= 1.2
@@ -30,8 +33,11 @@ Lite.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p0
 
 %build
+%{__aclocal}
+%{__autoconf}
 %configure \
 	--with-vox=cmu_us_kal16 \
 	--with-audio=oss
