@@ -16,7 +16,6 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	emacs
 BuildRequires:	flite-devel >= 1.2
-BuildRequires:	flite-static >= 1.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,7 +37,9 @@ Lite.
 %build
 %{__aclocal}
 %{__autoconf}
-%configure \
+flite_dir="%{_libdir}" \
+	flite_include_dir="%{_includedir}/flite" \
+	%configure \
 	--with-vox=cmu_us_kal16 \
 	--with-audio=oss
 
