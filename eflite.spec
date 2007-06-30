@@ -10,10 +10,7 @@ Source0:	http://dl.sourceforge.net/eflite/%{name}-%{version}.tar.gz
 # Source0-md5:	9c1a25990426ae1c6519ee1a4528dc03
 Patch0:		%{name}-doc.patch
 Patch1:		%{name}-DESTDIR.patch
-Patch2:		%{name}-lib64flite.patch
 URL:		http://eflite.sourceforge.net/
-BuildRequires:	autoconf
-BuildRequires:	automake
 BuildRequires:	emacs
 BuildRequires:	flite-devel >= 1.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -32,11 +29,8 @@ Lite.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p0
 
 %build
-%{__aclocal}
-%{__autoconf}
 export flite_dir="%{_libdir}"
 export flite_include_dir="%{_includedir}/flite"
 %configure \
