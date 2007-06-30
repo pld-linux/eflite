@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	FLite - serwer Emacspeak
 Summary(ru.UTF-8):	FLite сервер для Emacspeak
 Name:		eflite
 Version:	0.4.1
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://dl.sourceforge.net/eflite/%{name}-%{version}.tar.gz
