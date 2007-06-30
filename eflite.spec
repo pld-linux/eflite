@@ -37,9 +37,9 @@ Lite.
 %build
 %{__aclocal}
 %{__autoconf}
-flite_dir="%{_libdir}" \
-	flite_include_dir="%{_includedir}/flite" \
-	%configure \
+export flite_dir="%{_libdir}"
+export flite_include_dir="%{_includedir}/flite"
+%configure \
 	--with-vox=cmu_us_kal16 \
 	--with-audio=oss
 
