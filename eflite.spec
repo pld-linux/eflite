@@ -13,6 +13,7 @@ Patch1:		%{name}-DESTDIR.patch
 URL:		http://eflite.sourceforge.net/
 BuildRequires:	emacs
 BuildRequires:	flite-devel >= 1.2
+BuildRequires:	flite-static >= 1.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
