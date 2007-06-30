@@ -1,0 +1,11 @@
+--- configure.in	2007-01-19 01:01:09.000000000 +0100
++++ configure.in-new	2007-06-30 17:54:17.310553130 +0200
+@@ -19,6 +19,8 @@
+     flite_dir=/usr/local
+   elif test -f /usr/lib/libflite.a; then
+     flite_dir=/usr
++  elif test -f /usr/lib64/libflite.a; then
++    flite_dir=/usr
+   elif test -f /opt/flite/lib/libflite.a; then
+     flite_dir=/opt
+   elif test -f $HOME/flite-1.2-release/lib/libflite.a; then
